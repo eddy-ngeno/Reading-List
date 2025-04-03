@@ -1,0 +1,55 @@
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 0.75rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        margin: 0.5rem 0;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+    }
+    
+    .filter-controls select {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reading List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-book-reader"></i> My Reading List</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="add-book">
+                <h2>Add New Book</h2>
+                <form id="book-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option value="want-to-read">Want to Read</option>
+                            <option value="reading">Currently Reading</option>
+                            <option value="read">Finished Reading</option>
+                        </select>
+                    </div>
+                    <div class="form-group rating-group" style="display: none;">
+                        <label for="rating">Rating (1-5)</label>
+                        <div class="star-rating">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="rating" value="0">
+                    </div>
+                    <button type="submit" class="btn">Add Book</button>
+                </form>
+            </section>
+
+            <section class="book-dashboard">
+                <h2>My Books Dashboard</h2>
+                <div class="stats">
+                    <div class="stat-card total-books">
+                        <h3>Total Books</h3>
+                        <p id="total-count">0</p>
+                    </div>
+                    <div class="stat-card read-books">
+                        <h3>Books Read</h3>
+                        <p id="read-count">0</p>
+                    </div>
+                    <div class="stat-card want-to-read">
+                        <h3>Want to Read</h3>
+                        <p id="want-count">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="books-list">
+                <h2>My Books</h2>
+                <div class="filter-controls">
+                    <select id="filter-status">
+                        <option value="all">All Books</option>
+                        <option value="want-to-read">Want to Read</option>
+                        <option value="reading">Currently Reading</option>
+                        <option value="read">Finished Reading</option>
+                    </select>
+                    <select id="sort-by">
+                        <option value="title">Sort by Title</option>
+                        <option value="author">Sort by Author</option>
+                        <option value="rating">Sort by Rating</option>
+                        <option value="date-added">Sort by Date Added</option>
+                    </select>
+                </div>
+                <div id="books-container" class="books-grid">
+                    <!-- Books will be inserted here dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Reading List</p>
+        </div>
+    </footer>
+
+    <script src="UI.js"></script>
+    <script src="database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
