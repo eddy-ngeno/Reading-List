@@ -20,7 +20,7 @@ A simple web application to track your reading habits.
 
 ## Usage
 
-1. Visit the live application: [My Reading List](https://your-username.github.io/reading-list/)
+1. Visit the live application: [My Reading List](https://eddy-ngeno.github.io/Reading-List/)
 2. Use the form at the top to add new books
 3. Fill in the title, author, and reading status
 4. If you've finished a book, you can also give it a rating
